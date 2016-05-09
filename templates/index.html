@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="app">
+	<div class="container" ng-controller="MainController as mCtrl">	
+		<h1>Renderizando un template html</h1>
+		<h3>Hello {{ .Name }}  </h3>
+		<p> {{"{{"}} mCtrl.nombre  {{"}}"}} </p>
+		<form action="">
+			<div class="form-group">
+				<input type="text" ng-model="mCtrl.search">
+			</div>
+			<div> <button ng-click="mCtrl.change()"> aceptar </button></div>
+		</form>
+	</div>
+	<script src="static/angular/angular.js"></script>
+	<script src="static/src/app.js"></script>
+	<script src="static/src/controller.js"></script>
+</body>
+</html>
